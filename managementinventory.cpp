@@ -10,6 +10,9 @@ int main(){
 	string barang;
 	int stok;
 
+	ifstream readfile;
+	char read;
+
 while (1){
 	
 		system("cls");
@@ -40,6 +43,17 @@ while (1){
 			system("cls");	
 			cout<<"Keluar program...";		
 			break;
+		}else if(pilih==2){
+			system("cls");
+			cout<<setw(50)<<left<<"Nama Barang"<<setw(50)<<left<<"Jumlah Barang"<<endl;
+			readfile.open("databarang.txt",ios::app);
+			while(!readfile.eof()){
+				readfile.get(read);
+				cout<<read;
+			}
+			readfile.close();
+			cin.ignore();
+			cin.get();
 		}
 	}
   
