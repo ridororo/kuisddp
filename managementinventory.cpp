@@ -83,7 +83,7 @@ while (1){
             cout << "Menghapus barang..." << endl;
             cin.ignore();
             cin.get();
-        }
+	}
 
 	}
   
