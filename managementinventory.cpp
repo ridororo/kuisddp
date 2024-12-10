@@ -36,6 +36,10 @@ while (1){
 			addfile.close();
 			
 			
+		}else if(pilih==4){
+			system("cls");	
+			cout<<"Keluar program...";		
+			break;
 		}
 	}
   
