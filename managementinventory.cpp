@@ -4,7 +4,12 @@
 using namespace std;
 
 int main(){
-  
+	ofstream addfile;
+	addfile.open("databarang.txt", ios::app);
+	addfile.close();
+	string barang;
+	int stok;
+
 while (1){
 	
 		system("cls");
@@ -19,6 +24,19 @@ while (1){
 
 		
 		cin>>pilih;
+	if(pilih==1){
+			system("cls");
+			addfile.open("databarang.txt", ios::app);
+			cout<<"Masukan nama barang (tanpa spasi) : ";
+			cin.ignore();
+			getline(cin,barang);
+			cout<<"Masukan Jumlah: ";
+			cin>>stok;
+			addfile<<setw(50)<<left<<barang<<setw(50)<<left<<stok<<endl;
+			addfile.close();
+			
+			
+		}
 	}
   
   return 0;
