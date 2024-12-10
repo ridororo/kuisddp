@@ -14,6 +14,8 @@ int main(){
 	ifstream readfile;
 	char read;
 
+	int pilih;
+
 while (1){
 	
 		system("cls");
