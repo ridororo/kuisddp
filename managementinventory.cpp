@@ -55,7 +55,34 @@ while (1){
 			readfile.close();
 			cin.ignore();
 			cin.get();
-		}
+		}else if(pilih==3){
+			system("cls");
+            string barangHapus;
+            cout << "Masukan nama barang yang ingin dihapus: ";
+            cin.ignore();
+            getline(cin, barangHapus);
+            
+            vector<string> lines;
+            readfile.open("databarang.txt", ios::app);
+            string line;
+            while(getline(readfile, line)){
+                lines.push_back(line);
+            }
+            readfile.close();
+            
+            addfile.open("databarang.txt", ios::trunc);
+            for(const string line : lines){
+
+                if(line.find(barangHapus)){
+                    addfile << line << endl;
+                }
+            }
+            addfile.close();
+            cout << "Menghapus barang..." << endl;
+            cin.ignore();
+            cin.get();
+        }
+
 	}
   
   return 0;
