@@ -1,24 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <iomanip>
-using namespace std;
-
-int main(){
-	ofstream addfile;
-	ifstream readfile;
-	char read;
-	
-	addfile.open("databarang.txt", ios::app);
-	addfile.close();
-	
-	string barang;
-	int stok;
-	int indeks=1;
-	
-	
-	int pilih;
-	
-	while (1){
+while (1){
 	
 		system("cls");
 		cout<<"----------------------"<<endl;
@@ -32,8 +12,4 @@ int main(){
 
 		
 		cin>>pilih;
-  }
-
-  return 0;
-}
-
+	}
